@@ -84,8 +84,9 @@ class Model(nn.Module):
 
         x_pred_from_x = self.linear_x(x_norm.permute(0, 2, 1)).permute(0, 2, 1) # B, P, C
         
-        pred_from_retrieval = self.retrieval_dict[mode][:, index] # G, B, P, C
+        pred_from_retrieval = self.retrieval_dict[mode]
         pred_from_retrieval = pred_from_retrieval.to(self.device)
+        pred_from_retrieval = pred_from_retrieval[:, index] # G, B, P, C
         
         retrieval_pred_list = []
         
