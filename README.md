@@ -12,3 +12,6 @@ See `fix(RAFT)` commits
 All commands should be ran from within `./RAFT/`, even if the virtual env is in root.
 - `cd ./RAFT`
 - `uv run run.py --data ETTm1 --data_path ETTm1.csv`
+- `uv run run.py --data ETTm2 --data_path ETTm2.csv`
+- `uv run run.py --data ETTh1 --data_path ETTh1.csv`
+- `uv run run.py --data ETTh2 --data_path ETTh2.csv`
