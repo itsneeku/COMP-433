@@ -1,9 +1,9 @@
 # Custom
 # data/
 checkpoints/
-results/
-test_results/
-result_*.txt
+# results/
+# test_results/
+# result_*.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

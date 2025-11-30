@@ -1,0 +1,12 @@
+long_term_forecast_temp_RAFT_ETTm1_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_expand2_dc4_fc1_ebtimeF_dtTrue_test_0  
+mse:0.32903918623924255, mae:0.3714752793312073, dtw:-999
+
+long_term_forecast_temp_RAFT_ETTm2_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_expand2_dc4_fc1_ebtimeF_dtTrue_test_0  
+mse:0.1773216277360916, mae:0.2658831477165222, dtw:-999
+
+long_term_forecast_temp_RAFT_ETTh1_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_expand2_dc4_fc1_ebtimeF_dtTrue_test_0  
+mse:0.3867633044719696, mae:0.4136413633823395, dtw:-999
+
+long_term_forecast_temp_RAFT_ETTh2_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_expand2_dc4_fc1_ebtimeF_dtTrue_test_0  
+mse:0.29599693417549133, mae:0.34955647587776184, dtw:-999
+
