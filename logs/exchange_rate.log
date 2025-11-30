@@ -1,0 +1,111 @@
+True
+Args in experiment:
+Basic Config
+  Task Name:          long_term_forecast  Is Training:        1
+  Model ID:           temp                Model:              RAFT
+
+Data Loader
+  Data:               custom              Root Path:          ./data/ETT/
+  Data Path:          exchange_rate.csv   Features:           M
+  Target:             OT                  Freq:               h
+  Checkpoints:        ./checkpoints/
+
+Forecasting Task
+  Seq Len:            96                  Label Len:          48
+  Pred Len:           96                  Seasonal Patterns:  Monthly
+  Inverse:            0
+
+Model Parameters
+  Top k:              5                   Num Kernels:        6
+  Enc In:             8                   Dec In:             8
+  C Out:              8                   d model:            512
+  n heads:            8                   e layers:           2
+  d layers:           1                   d FF:               2048
+  Moving Avg:         25                  Factor:             1
+  Distil:             1                   Dropout:            0.1
+  Embed:              timeF               Activation:         gelu
+  Output Attention:   0
+
+Run Parameters
+  Num Workers:        10                  Itr:                1
+  Train Epochs:       10                  Batch Size:         32
+  Patience:           10                  Learning Rate:      0.0001
+  Des:                test                Loss:               MSE
+  Lradj:              type1               Use Amp:            0
+
+GPU
+  Use GPU:            1                   GPU:                0
+  Use Multi GPU:      0                   Devices:            0,1,2,3
+
+De-stationary Projector Params
+  P Hidden Dims:      128, 128            P Hidden Layers:    2
+
+Use GPU: cuda:0
+train 5120
+val 665
+test 1422
+Doing Train Retrieval
+100%|█████████████| 5/5 [00:01<00:00,  3.42it/s]
+Doing Valid Retrieval
+100%|█████████████| 1/1 [00:00<00:00,  4.07it/s]
+Doing Test Retrieval
+100%|█████████████| 2/2 [00:00<00:00,  4.88it/s]
+>>>>>>>start training : long_term_forecast_temp_RAFT_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_expand2_dc4_fc1_ebtimeF_dtTrue_test_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 5120
+val 665
+test 1422
+        iters: 100, epoch: 1 | loss: 0.0868112
+        speed: 0.0220s/iter; left time: 33.0496s
+Epoch: 1 cost time: 2.16251540184021
+Epoch: 1, Steps: 160 | Train Loss: 0.1266342 Vali Loss: 0.1292524 Test Loss: 0.0846031
+Updating learning rate to 0.0001
+        iters: 100, epoch: 2 | loss: 0.1614125
+        speed: 0.0284s/iter; left time: 38.1229s
+Epoch: 2 cost time: 1.9790499210357666
+Epoch: 2, Steps: 160 | Train Loss: 0.1218300 Vali Loss: 0.1290618 Test Loss: 0.0844440
+Updating learning rate to 5e-05
+        iters: 100, epoch: 3 | loss: 0.0886500
+        speed: 0.0283s/iter; left time: 33.4189s
+Epoch: 3 cost time: 1.9775447845458984
+Epoch: 3, Steps: 160 | Train Loss: 0.1213501 Vali Loss: 0.1280582 Test Loss: 0.0852473
+Updating learning rate to 2.5e-05
+        iters: 100, epoch: 4 | loss: 0.1643067
+        speed: 0.0281s/iter; left time: 28.7033s
+Epoch: 4 cost time: 1.9660537242889404
+Epoch: 4, Steps: 160 | Train Loss: 0.1212102 Vali Loss: 0.1279830 Test Loss: 0.0848947
+Updating learning rate to 1.25e-05
+        iters: 100, epoch: 5 | loss: 0.1679888
+        speed: 0.0293s/iter; left time: 25.2541s
+Epoch: 5 cost time: 2.204258441925049
+Epoch: 5, Steps: 160 | Train Loss: 0.1211359 Vali Loss: 0.1280727 Test Loss: 0.0849517
+Updating learning rate to 6.25e-06
+        iters: 100, epoch: 6 | loss: 0.0990971
+        speed: 0.0295s/iter; left time: 20.6636s
+Epoch: 6 cost time: 2.0940322875976562
+Epoch: 6, Steps: 160 | Train Loss: 0.1211035 Vali Loss: 0.1282207 Test Loss: 0.0849459
+Updating learning rate to 3.125e-06
+        iters: 100, epoch: 7 | loss: 0.1211114
+        speed: 0.0311s/iter; left time: 16.8196s
+Epoch: 7 cost time: 2.143594980239868
+Epoch: 7, Steps: 160 | Train Loss: 0.1210849 Vali Loss: 0.1285047 Test Loss: 0.0849504
+Updating learning rate to 1.5625e-06
+        iters: 100, epoch: 8 | loss: 0.0953948
+        speed: 0.0277s/iter; left time: 10.5635s
+Epoch: 8 cost time: 1.9813838005065918
+Epoch: 8, Steps: 160 | Train Loss: 0.1210769 Vali Loss: 0.1282603 Test Loss: 0.0849403
+Updating learning rate to 7.8125e-07
+        iters: 100, epoch: 9 | loss: 0.1310402
+        speed: 0.0292s/iter; left time: 6.4486s
+Epoch: 9 cost time: 2.1424753665924072
+Epoch: 9, Steps: 160 | Train Loss: 0.1210717 Vali Loss: 0.1281324 Test Loss: 0.0849440
+Updating learning rate to 3.90625e-07
+        iters: 100, epoch: 10 | loss: 0.1705796
+        speed: 0.0305s/iter; left time: 1.8605s
+Epoch: 10 cost time: 2.153057813644409
+Epoch: 10, Steps: 160 | Train Loss: 0.1210702 Vali Loss: 0.1282361 Test Loss: 0.0849452
+Updating learning rate to 1.953125e-07
+>>>>>>>testing : long_term_forecast_temp_RAFT_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_expand2_dc4_fc1_ebtimeF_dtTrue_test_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 1422
+test shape: (1422, 96, 8) (1422, 96, 8)
+test shape: (1422, 96, 8) (1422, 96, 8)
+mse:0.08441630005836487, mae:0.19964714348316193, dtw:-999
