@@ -16,4 +16,4 @@ All commands should be ran from within `./RAFT/`, even if the virtual env is in 
 - `uv run run.py --data ETTh1 --data_path ETTh1.csv`
 - `uv run run.py --data ETTh2 --data_path ETTh2.csv`
 - `uv run run.py --data custom --data_path exchange_rate.csv --enc_in 8 --dec_in 8 --c_out 8`
-- `uv run run.py --data custom --data_path ecommerce.csv --target Sales --enc_in 6 --dec_in 6 --c_out 6 --freq d --seq_len 24 --label_len 12 --pred_len 24`
+- `uv run run.py --data custom --data_path ecommerce.csv --enc_in 6 --dec_in 6 --c_out 6 --freq d --seq_len 24 --label_len 12 --pred_len 24`
