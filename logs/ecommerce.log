@@ -1,0 +1,91 @@
+True
+Args in experiment:
+Basic Config
+  Task Name:          long_term_forecast  Is Training:        1                   
+  Model ID:           temp                Model:              RAFT                
+
+Data Loader
+  Data:               custom              Root Path:          ./data/ETT/         
+  Data Path:          ecommerce.csv       Features:           M                   
+  Target:             Sales               Freq:               d                   
+  Checkpoints:        ./checkpoints/      
+
+Forecasting Task
+  Seq Len:            24                  Label Len:          12                  
+  Pred Len:           24                  Seasonal Patterns:  Monthly             
+  Inverse:            0                   
+
+Model Parameters
+  Top k:              5                   Num Kernels:        6                   
+  Enc In:             6                   Dec In:             6                   
+  C Out:              6                   d model:            512                 
+  n heads:            8                   e layers:           2                   
+  d layers:           1                   d FF:               2048                
+  Moving Avg:         25                  Factor:             1                   
+  Distil:             1                   Dropout:            0.1                 
+  Embed:              timeF               Activation:         gelu                
+  Output Attention:   0                   
+
+Run Parameters
+  Num Workers:        10                  Itr:                1                   
+  Train Epochs:       10                  Batch Size:         32                  
+  Patience:           10                  Learning Rate:      0.0001              
+  Des:                test                Loss:               MSE                 
+  Lradj:              type1               Use Amp:            0                   
+
+GPU
+  Use GPU:            1                   GPU:                0                   
+  Use Multi GPU:      0                   Devices:            0,1,2,3             
+
+De-stationary Projector Params
+  P Hidden Dims:      128, 128            P Hidden Layers:    2                   
+
+Use GPU: cuda:0
+train 464
+val 51
+test 123
+Doing Train Retrieval
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.20it/s]
+Doing Valid Retrieval
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  7.25it/s]
+Doing Test Retrieval
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  7.42it/s]
+>>>>>>>start training : long_term_forecast_temp_RAFT_custom_ftM_sl24_ll12_pl24_dm512_nh8_el2_dl1_df2048_expand2_dc4_fc1_ebtimeF_dtTrue_test_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 464
+val 51
+test 123
+Epoch: 1 cost time: 0.4195716381072998
+Epoch: 1, Steps: 15 | Train Loss: 1.9574741 Vali Loss: 1.7719499 Test Loss: 2.0061872
+Updating learning rate to 0.0001
+Epoch: 2 cost time: 0.26110410690307617
+Epoch: 2, Steps: 15 | Train Loss: 1.9101666 Vali Loss: 1.7987725 Test Loss: 1.9589138
+Updating learning rate to 5e-05
+Epoch: 3 cost time: 0.26706409454345703
+Epoch: 3, Steps: 15 | Train Loss: 1.8948209 Vali Loss: 1.7626195 Test Loss: 1.9362696
+Updating learning rate to 2.5e-05
+Epoch: 4 cost time: 0.26213693618774414
+Epoch: 4, Steps: 15 | Train Loss: 1.8649028 Vali Loss: 1.7003720 Test Loss: 1.9247615
+Updating learning rate to 1.25e-05
+Epoch: 5 cost time: 0.27422642707824707
+Epoch: 5, Steps: 15 | Train Loss: 1.8521751 Vali Loss: 1.6964028 Test Loss: 1.9190248
+Updating learning rate to 6.25e-06
+Epoch: 6 cost time: 0.2518770694732666
+Epoch: 6, Steps: 15 | Train Loss: 1.8560064 Vali Loss: 1.7074008 Test Loss: 1.9162046
+Updating learning rate to 3.125e-06
+Epoch: 7 cost time: 0.26099491119384766
+Epoch: 7, Steps: 15 | Train Loss: 1.8472489 Vali Loss: 1.7728882 Test Loss: 1.9147990
+Updating learning rate to 1.5625e-06
+Epoch: 8 cost time: 0.2594106197357178
+Epoch: 8, Steps: 15 | Train Loss: 1.8329217 Vali Loss: 1.6962414 Test Loss: 1.9140906
+Updating learning rate to 7.8125e-07
+Epoch: 9 cost time: 0.25029659271240234
+Epoch: 9, Steps: 15 | Train Loss: 1.8340283 Vali Loss: 1.7148483 Test Loss: 1.9137356
+Updating learning rate to 3.90625e-07
+Epoch: 10 cost time: 0.2710752487182617
+Epoch: 10, Steps: 15 | Train Loss: 1.8399477 Vali Loss: 1.7084188 Test Loss: 1.9135616
+Updating learning rate to 1.953125e-07
+>>>>>>>testing : long_term_forecast_temp_RAFT_custom_ftM_sl24_ll12_pl24_dm512_nh8_el2_dl1_df2048_expand2_dc4_fc1_ebtimeF_dtTrue_test_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 123
+test shape: (123, 24, 6) (123, 24, 6)
+test shape: (123, 24, 6) (123, 24, 6)
+mse:1.9042880535125732, mae:1.0851486921310425, dtw:-999
