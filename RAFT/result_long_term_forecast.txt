@@ -13,3 +13,6 @@ mse:0.29599693417549133, mae:0.34955647587776184, dtw:-999
 long_term_forecast_temp_RAFT_custom_ftM_sl96_ll48_pl96_dm512_nh8_el2_dl1_df2048_expand2_dc4_fc1_ebtimeF_dtTrue_test_0  
 mse:0.08441630005836487, mae:0.19964714348316193, dtw:-999
 
+long_term_forecast_temp_RAFT_custom_ftM_sl24_ll12_pl24_dm512_nh8_el2_dl1_df2048_expand2_dc4_fc1_ebtimeF_dtTrue_test_0  
+mse:1.9042880535125732, mae:1.0851486921310425, dtw:-999
+
