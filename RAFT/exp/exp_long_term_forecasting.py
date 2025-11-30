@@ -46,7 +46,7 @@ class Exp_Long_Term_Forecast(Exp_Basic):
         criterion = nn.MSELoss()
         return criterion
 
-    def vali(self, vali_data, vali_loader, criterion):
+    def vali(self, vali_data, vali_loader, criterion, mode='valid'):
         total_loss = []
         self.model.eval()
         with torch.no_grad():
@@ -62,7 +62,7 @@ class Exp_Long_Term_Forecast(Exp_Basic):
                 dec_inp = torch.cat([batch_y[:, :self.args.label_len, :], dec_inp], dim=1).float().to(self.device)
                 # encoder - decoder
                 if self.args.model == 'RAFT':
-                    outputs = self.model(batch_x, index, mode='valid')
+                    outputs = self.model(batch_x, index, mode)
                 else:
                     if self.args.use_amp:
                         with torch.cuda.amp.autocast():
@@ -159,8 +159,8 @@ class Exp_Long_Term_Forecast(Exp_Basic):
 
             print("Epoch: {} cost time: {}".format(epoch + 1, time.time() - epoch_time))
             train_loss = np.average(train_loss)
-            vali_loss = self.vali(vali_data, vali_loader, criterion)
-            test_loss = self.vali(test_data, test_loader, criterion)
+            vali_loss = self.vali(vali_data, vali_loader, criterion, mode='valid')
+            test_loss = self.vali(test_data, test_loader, criterion, mode='test')
 
             print("Epoch: {0}, Steps: {1} | Train Loss: {2:.7f} Vali Loss: {3:.7f} Test Loss: {4:.7f}".format(
                 epoch + 1, train_steps, train_loss, vali_loss, test_loss))

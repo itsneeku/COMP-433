@@ -1,5 +1,5 @@
 import pandas as pd
-from datetime import datetime, timedelta
+from datetime import datetime
 
 df = pd.read_csv("exchange_rate.txt", header=None)
 
