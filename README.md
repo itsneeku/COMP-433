@@ -27,7 +27,7 @@ The PyTorch source code is organized in the `RAFT/` directory:
 
 ### ETT Datasets
 
-ETT datasets (ETTh1, ETTh2, ETTm1, ETTm2) should be placed in `RAFT/data/ETT/`. Download from: [Time-Series-Library repository](https://github.com/thuml/Time-Series-Library)
+ETT datasets (ETTh1, ETTh2, ETTm1, ETTm2) should be placed in `RAFT/data/ETT/`. Download from: [ETDataset repository repository]([https://github.com/thuml/Time-Series-Library](https://github.com/zhouhaoyi/ETDataset))
 
 ### Other Datasets
 
