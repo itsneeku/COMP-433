@@ -1,5 +1,15 @@
 # COMP 433
 
+# Team Members
+Youssef Ouakaa (40157718) 
+
+Gabriel Asencios (40176253) 
+
+Nicolae Rusu (40245233) 
+
+Ryan Mazari (40241379)
+
+
 ## Project Description
 
 This project implements and evaluates the **Retrieval-Augmented Forecasting of Time-series (RAFT)** model for long-term time series forecasting. We conducted experiments on multiple benchmark datasets (ETT, exchange rate, solar energy, weather) and one custom dataset (e-commerce). Our work involved adapting the RAFT implementation, creating preprocessing pipelines, and evaluating model performance across different forecasting configurations. For detailed methodology and results, refer to our final paper.
