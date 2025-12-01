@@ -33,7 +33,7 @@ ETT datasets (ETTh1, ETTh2, ETTm1, ETTm2) should be placed in `RAFT/data/ETT/`. 
 
 For download links to other benchmark datasets (exchange rate, solar energy, weather) and the custom e-commerce dataset, refer to our final paper. These datasets should be placed according to the path passed in the commands.
 
-## Training and Validation
+## Running commands
 
 All commands should be run from within `./RAFT/` directory:
 
